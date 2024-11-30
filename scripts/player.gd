@@ -21,11 +21,6 @@ func _physics_process(delta):
 	state_handler(delta)
 
 func handle_movement(delta):
-	if velocity == Vector2.ZERO:
-		stopped_time += 1
-	else:
-		stopped_time = 0
-		
 	var direction = Input.get_axis("move_left", "move_right")
 	var direction_y = Input.get_axis("move_up", "move_down")
 	
@@ -56,8 +51,10 @@ func state_handler(delta):
 			if stopped_time >= TRANSFORMATION_DELAY:
 				current_state = State.IDLE_TRANSFORMATION
 			else:
-				animated_sprite.play("rat_idle1")
+				stopped_time += 1
+				animated_sprite.play("rat_idle")
 		State.RUN:
+			stopped_time = 0
 			animated_sprite.play("rat_run")
 		State.IDLE_TRANSFORMATION:
 			if not animated_sprite.is_playing():
