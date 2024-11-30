@@ -10,12 +10,8 @@ func _ready():
 func _on_body_entered(body):
 	if body is CharacterBody2D: # Check if the body is the player
 		print("Body entered")
-		player_inside = body # Store the reference to the player
+		body.externalForce = Vector2(-0.5, 0)
 
 func _on_body_exited(body):
 	print("Body exit")
-	player_inside = null # Clear the reference
-
-func _physics_process(delta):
-	if player_inside != null: # If the player is inside the area
-		player_inside.velocity.x = -130
+	body.externalForce = Vector2(0, 0)

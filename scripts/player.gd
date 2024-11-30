@@ -18,6 +18,8 @@ var random_animation_time = 0.0
 
 var last_rotation = 0.0
 
+var externalForce = Vector2(0,0)
+
 func _physics_process(delta):
 	handle_movement(delta)
 	state_handler(delta)
@@ -46,9 +48,7 @@ func handle_movement(delta):
 		animated_sprite.rotation = last_rotation
 	else:
 		animated_sprite.rotation = last_rotation
-
-	velocity.x = direction * SPEED
-	velocity.y = direction_y * SPEED
+	velocity = (move_direction.normalized() + externalForce) * SPEED
 	move_and_slide()
 
 func state_handler(delta):

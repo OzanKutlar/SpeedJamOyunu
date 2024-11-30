@@ -333,7 +333,7 @@ script = ExtResource("1_ofpvf")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_81gkq")
-animation = &"rat_run"
+animation = &"IdleTransformation"
 autoplay = "rat_idle1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
