@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b635p7upw1qux"]
+
+[ext_resource type="Script" path="res://scripts/checkpoint.gd" id="1_agsam"]
+
+[node name="Checkpoint" type="StaticBody2D"]
+script = ExtResource("1_agsam")

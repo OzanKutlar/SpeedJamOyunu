@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
+var initial_position = Vector2(34,37);
 
 
 

@@ -19,4 +19,3 @@ func _on_body_exited(body):
 func _physics_process(delta):
 	if player_inside != null: # If the player is inside the area
 		player_inside.velocity.x = -130
-
