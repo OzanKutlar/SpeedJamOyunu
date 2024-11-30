@@ -19,13 +19,13 @@ func _physics_process(delta):
 
 	if(stoppedTime == 5 * 60):
 		print("idle2 Launched")
-		animated_sprite.play("idle2")
+		animated_sprite.play("rat_idle2")
 	# Get the input direction: -1, 0, 1
 	var direction = Input.get_axis("move_left", "move_right")
 	var directionY = Input.get_axis("move_up", "move_down")
 	
 	if(Vector2(direction, directionY) == Vector2.ZERO):
-		animated_sprite.play("idle")
+		animated_sprite.play("rat_idle")
 	else:
 		animated_sprite.play("run")
 	
