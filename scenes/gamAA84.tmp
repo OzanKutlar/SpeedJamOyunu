@@ -594,7 +594,6 @@ text = "Great job!"
 horizontal_alignment = 1
 
 [node name="Stream" parent="." instance=ExtResource("10_vo0ln")]
-position = Vector2(-27, -71)
+position = Vector2(24, -27)
 rotation = 6.28319
-size = 300
-speed = -2
+size = 3
