@@ -16,6 +16,8 @@ var initial_position = Vector2.ZERO
 @onready var animated_sprite = $AnimatedSprite2D
 var random_animation_time = 0.0
 
+var last_rotation = 0.0
+
 func _physics_process(delta):
 	handle_movement(delta)
 	state_handler(delta)
@@ -27,19 +29,24 @@ func handle_movement(delta):
 		stopped_time = 0
 	var direction = int(Input.is_action_pressed("move_right")) - int(Input.is_action_pressed("move_left"))
 	var direction_y = int(Input.is_action_pressed("move_down")) - int(Input.is_action_pressed("move_up"))
-	if Vector2(direction, direction_y) != Vector2.ZERO:
+	var move_direction = Vector2(direction, direction_y)
+
+	if move_direction != Vector2.ZERO:
 		current_state = State.RUN
+		last_rotation = move_direction.angle()
 	else:
 		if current_state != State.IDLE_TRANSFORMATION and current_state != State.STANDUP_IDLE:
 			current_state = State.IDLE
 		elif current_state == State.IDLE_TRANSFORMATION:
-			frameChanged();
+			frameChanged()
 		else:
 			current_state = State.STANDUP_IDLE
-	if direction > 0:
-		animated_sprite.flip_h = false
-	elif direction < 0:
-		animated_sprite.flip_h = true
+
+	if move_direction != Vector2.ZERO:
+		animated_sprite.rotation = last_rotation
+	else:
+		animated_sprite.rotation = last_rotation
+
 	velocity.x = direction * SPEED
 	velocity.y = direction_y * SPEED
 	move_and_slide()
@@ -65,10 +72,11 @@ func state_handler(delta):
 				else:
 					animated_sprite.play("rat_idle2")
 				random_animation_time = 1.0
-				
+
 func frameChanged():
 	if animated_sprite.frame == animated_sprite.sprite_frames.get_frame_count(animated_sprite.animation) - 1:
 		animEnd(animated_sprite.animation)
+
 func animEnd(animation_name):
 	if animation_name == "IdleTransformation":
-		current_state = State.STANDUP_IDLE;
+		current_state = State.STANDUP_IDLE
