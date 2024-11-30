@@ -40,8 +40,8 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u4xjq"]
-size = Vector2(80, 14)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ffy72"]
+normal = Vector2(1, 0)
 
 [node name="Stream" type="Node2D"]
 
@@ -56,5 +56,5 @@ frame_progress = 0.722655
 script = ExtResource("4_3icl5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(4, -7)
-shape = SubResource("RectangleShape2D_u4xjq")
+position = Vector2(-5.5, -7)
+shape = SubResource("WorldBoundaryShape2D_ffy72")
