@@ -56,7 +56,7 @@ func state_handler(delta):
 			if stopped_time >= TRANSFORMATION_DELAY:
 				current_state = State.IDLE_TRANSFORMATION
 			else:
-				animated_sprite.play("rat_idle")
+				animated_sprite.play("rat_idle1")
 		State.RUN:
 			animated_sprite.play("rat_run")
 		State.IDLE_TRANSFORMATION:
