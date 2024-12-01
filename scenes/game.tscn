@@ -599,13 +599,14 @@ shape = SubResource("CircleShape2D_388xq")
 position = Vector2(-105, -94)
 zoom = Vector2(4, 4)
 script = ExtResource("10_gjf24")
-label = NodePath("../Label")
+label = NodePath("Label")
 
-[node name="Label" type="Label" parent="."]
-offset_left = -248.0
-offset_top = -38.0
-offset_right = -187.0
-offset_bottom = -15.0
+[node name="Label" type="Label" parent="Camera2D"]
+offset_left = -143.0
+offset_top = 56.0
+offset_right = -82.0
+offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("7_8cblx")
 text = "Time : X"
 script = ExtResource("4_c2t80")
 
