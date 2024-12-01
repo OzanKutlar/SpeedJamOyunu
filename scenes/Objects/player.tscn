@@ -331,7 +331,7 @@ collision_layer = 2
 script = ExtResource("1_ofpvf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -12)
+position = Vector2(0, -5)
 sprite_frames = SubResource("SpriteFrames_81gkq")
 animation = &"IdleTransformation"
 autoplay = "rat_idle1"
