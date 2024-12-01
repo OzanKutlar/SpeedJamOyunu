@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://d2w2i5h0lhc6l" path="res://scenes/slime.tscn" id="6_l0s6b"]
 [ext_resource type="FontFile" uid="uid://dbjl1e6kdxpl6" path="res://assets/fonts/PixelOperator8.ttf" id="7_8cblx"]
 [ext_resource type="PackedScene" uid="uid://c4yinsv0bpplp" path="res://scenes/stream.tscn" id="10_vo0ln"]
-[ext_resource type="Script" path="res://scripts/aoe_killzone.gd" id="11_uybf4"]
+[ext_resource type="Script" path="res://scripts/map_scripts/aoe_killzone.gd" id="11_uybf4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ashvg"]
 texture = ExtResource("2_r1crl")

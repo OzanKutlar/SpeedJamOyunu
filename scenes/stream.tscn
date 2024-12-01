@@ -1,11 +1,11 @@
 [gd_scene load_steps=57 format=3 uid="uid://c4yinsv0bpplp"]
 
 [ext_resource type="Texture2D" uid="uid://ckvpcl7elcgnk" path="res://assets/sprites/Band_End.png" id="1_b51pv"]
-[ext_resource type="Script" path="res://scripts/expandable.gd" id="1_gt30t"]
+[ext_resource type="Script" path="res://scripts/map_scripts/expandable.gd" id="1_gt30t"]
 [ext_resource type="Texture2D" uid="uid://bap4fupnl82u0" path="res://assets/sprites/Band_Middle.png" id="2_ytpgc"]
 [ext_resource type="Texture2D" uid="uid://dii4gc18vx4r7" path="res://assets/sprites/Band_Start.png" id="3_0g5a7"]
 [ext_resource type="PackedScene" uid="uid://dtrbka1ef726o" path="res://scenes/killzone.tscn" id="3_ts8yv"]
-[ext_resource type="Script" path="res://scripts/wave.gd" id="4_3icl5"]
+[ext_resource type="Script" path="res://scripts/map_scripts/wave.gd" id="4_3icl5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y4xcw"]
 atlas = ExtResource("1_b51pv")
