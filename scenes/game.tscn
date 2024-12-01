@@ -1,7 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://cuv4vme4rwno0"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_l4ihi"]
-[ext_resource type="PackedScene" uid="uid://dqo2iiwgup72k" path="res://scenes/player.tscn" id="1_rbmkf"]
 [ext_resource type="FontFile" uid="uid://c53kogtyjwsss" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_nlliu"]
 [ext_resource type="Texture2D" uid="uid://d0q2g65ahgok" path="res://assets/sprites/world_tileset.png" id="2_r1crl"]
 [ext_resource type="PackedScene" uid="uid://bgv5v2fxqlswe" path="res://scenes/Objects/platform.tscn" id="3_cmfc3"]
@@ -11,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://d2w2i5h0lhc6l" path="res://scenes/Objects/slime.tscn" id="6_l0s6b"]
 [ext_resource type="FontFile" uid="uid://dbjl1e6kdxpl6" path="res://assets/fonts/PixelOperator8.ttf" id="7_8cblx"]
 [ext_resource type="PackedScene" uid="uid://c4yinsv0bpplp" path="res://scenes/Objects/stream.tscn" id="10_vo0ln"]
+[ext_resource type="PackedScene" uid="uid://dqnaqj8yb6hwd" path="res://scenes/Objects/player.tscn" id="11_qd63c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ashvg"]
 texture = ExtResource("2_r1crl")
@@ -498,10 +498,6 @@ offset_bottom = 79.0
 text = "Time : X"
 script = ExtResource("4_c2t80")
 
-[node name="Player" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_rbmkf")]
-position = Vector2(34, 37)
-camera = NodePath("../Camera2D")
-
 [node name="Killzone" parent="." instance=ExtResource("5_x8euu")]
 position = Vector2(74, 141)
 
@@ -609,3 +605,6 @@ position = Vector2(74, 141)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone2"]
 position = Vector2(-54, -153)
 shape = SubResource("CircleShape2D_388xq")
+
+[node name="Player" parent="." instance=ExtResource("11_qd63c")]
+position = Vector2(60, 40)

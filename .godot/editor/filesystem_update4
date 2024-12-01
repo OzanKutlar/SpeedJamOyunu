@@ -1,7 +1,1 @@
 res://scenes/game.tscn
-res://scenes/player.tscn
-res://scenes/MainMenu.tscn
-res://scripts/map_scripts/aoe_killzone.gd
-res://scenes/Objects/killzone.tscn
-res://scripts/map_scripts/killzone.gd
-res://scripts/map_scripts/wave.gd
