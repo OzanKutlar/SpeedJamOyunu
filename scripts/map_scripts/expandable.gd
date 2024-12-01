@@ -1,6 +1,5 @@
 extends Node2D
 
-@onready var timer = $Timer
 
 @export var size = 0
 
@@ -39,19 +38,19 @@ func _on_tree_entered():
 			return
 
 		# Duplicate the middle instance
-		var duplicate = middle.duplicate() as AnimatedSprite2D
-		duplicate.play("conveyor_mid")
-		if duplicate == null:
-			print("Failed to duplicate 'middle'.")
+		var duplicateMid = middle.duplicate() as AnimatedSprite2D
+		duplicateMid.play("conveyor_mid")
+		if duplicateMid == null:
+			print("Failed to duplicateMid 'middle'.")
 			return
 
-		duplicate.name = "middle_Duplicate_" + str(i + 1)
+		duplicateMid.name = "middle_duplicateMid_" + str(i + 1)
 
-		# Offset duplicates for better visibility (optional)
-		duplicate.position.x = middle.position.x + (16 * (i + 1))  # Adjust offset for 3D; use position for 2D
-		end = duplicate
-		# Add the duplicate to the same parent as `middle`
-		add_child(duplicate)
+		# Offset duplicateMids for better visibility (optional)
+		duplicateMid.position.x = middle.position.x + (16 * (i + 1))  # Adjust offset for 3D; use position for 2D
+		end = duplicateMid
+		# Add the duplicateMid to the same parent as `middle`
+		add_child(duplicateMid)
 	
 	end.play("conveyor_end")
 	killzone.scale.x = -(size + 1)

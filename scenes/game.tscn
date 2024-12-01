@@ -603,7 +603,7 @@ horizontal_alignment = 1
 position = Vector2(-27, -71)
 rotation = 6.28319
 size = 300
-speed = -2
+speed = 6
 
 [node name="AOE-Killzone" type="Area2D" parent="."]
 position = Vector2(33, -26)

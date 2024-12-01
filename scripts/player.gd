@@ -25,7 +25,7 @@ func _physics_process(delta):
 	handle_movement(delta)
 	state_handler(delta)
 
-func handle_movement(delta):
+func handle_movement(_delta):
 	
 	# Camera Smoothing
 	camera.global_position = camera.global_position.lerp(self.global_position, 0.1)
