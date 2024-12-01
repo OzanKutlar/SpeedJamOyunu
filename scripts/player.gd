@@ -11,7 +11,7 @@ var current_state = State.IDLE
 const SPEED = 130.0
 const TRANSFORMATION_DELAY = 5 * 60
 var stopped_time = 0
-@export var camera = Camera2D
+@export var camera: Camera2D = null
 var initial_position = Vector2.ZERO
 
 @onready var animated_sprite = $AnimatedSprite2D
@@ -21,6 +21,9 @@ var last_rotation = 0.0
 
 var externalForce = Vector2(0,0)
 
+var cameraOffset = Vector2(0,0)
+
+
 func _physics_process(delta):
 	handle_movement(delta)
 	state_handler(delta)
@@ -28,7 +31,8 @@ func _physics_process(delta):
 func handle_movement(_delta):
 	
 	# Camera Smoothing
-	camera.global_position = camera.global_position.lerp(self.global_position, 0.1)
+	if camera != null:
+		camera.global_position = camera.global_position.lerp(self.global_position, 0.1)
 	
 	
 	if velocity == Vector2.ZERO:
