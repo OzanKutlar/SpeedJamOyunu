@@ -1,6 +1,5 @@
 extends Area2D
 
-@onready var timer = $Timer
 
 
 var player_inside: CharacterBody2D = null
