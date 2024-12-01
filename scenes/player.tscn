@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://dqo2iiwgup72k"]
+[gd_scene load_steps=50 format=3 uid="uid://dnrjsdgar1qpd"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ofpvf"]
 [ext_resource type="Texture2D" uid="uid://dpmv52qplvi8j" path="res://assets/sprites/Rat_IdleChange.png" id="2_7nsmj"]
