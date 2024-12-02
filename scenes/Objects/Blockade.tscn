@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://byh1oawricta6"]
+
+[ext_resource type="Texture2D" uid="uid://daxdy6b2epnom" path="res://assets/sprites/Factory_ObstacleJar.png" id="1_av7fh"]
+[ext_resource type="Script" path="res://scripts/map_scripts/obstacle.gd" id="1_da24r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7wo7o"]
+size = Vector2(16, 16)
+
+[node name="Blockade" type="AnimatableBody2D"]
+script = ExtResource("1_da24r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7wo7o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_av7fh")
