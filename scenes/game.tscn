@@ -81,7 +81,7 @@ speed = 1
 [node name="Stream2" parent="Conveyors" instance=ExtResource("10_vo0ln")]
 position = Vector2(289, -178)
 rotation = 1.5708
-size = 22
+size = 21
 speed = 10
 
 [node name="Stream10" parent="Conveyors" instance=ExtResource("10_vo0ln")]
