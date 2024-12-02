@@ -70,7 +70,7 @@ func _on_body_entered(_body: Node) -> void:
 	
 	for child in get_children():
 		if child.get_class() == "Node2D":
-			print("Found Node2D")
+			#print("Found Node2D")
 			positions_list.append(child.position)
 	
 	# Start the timer

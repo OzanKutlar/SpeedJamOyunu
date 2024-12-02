@@ -15,11 +15,13 @@ var stopped_time = 0
 var initial_position = Vector2.ZERO
 
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var collision = $CollisionShape2D
 var random_animation_time = 0.0
 
 var last_rotation = 0.0
 
 var externalForce = Vector2(0,0)
+var externalNum = 0
 
 var cameraOffset = Vector2(0,0)
 
@@ -54,7 +56,7 @@ func handle_size(delta):
 func handle_movement(_delta):
 	
 	# Camera Smoothing
-	if camera != null:
+	if camera:
 		camera.global_position = camera.global_position.lerp(self.global_position, 0.1)
 	
 	
@@ -82,8 +84,11 @@ func handle_movement(_delta):
 
 	if move_direction != Vector2.ZERO:
 		animated_sprite.rotation = last_rotation
+		collision.rotation = last_rotation + (PI * 0.5)
+		
 	else:
 		animated_sprite.rotation = last_rotation
+		collision.rotation = last_rotation + (PI * 0.5)
 	velocity = (move_direction.normalized() + externalForce) * SPEED
 	move_and_slide()
 
