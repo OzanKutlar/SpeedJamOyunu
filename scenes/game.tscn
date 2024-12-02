@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cuv4vme4rwno0"]
+[gd_scene load_steps=23 format=3 uid="uid://cuv4vme4rwno0"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_l4ihi"]
 [ext_resource type="FontFile" uid="uid://c53kogtyjwsss" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_nlliu"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c4yinsv0bpplp" path="res://scenes/Objects/stream.tscn" id="10_vo0ln"]
 [ext_resource type="PackedScene" uid="uid://dqnaqj8yb6hwd" path="res://scenes/Objects/player.tscn" id="11_qd63c"]
 [ext_resource type="PackedScene" uid="uid://byh1oawricta6" path="res://scenes/Objects/Blockade.tscn" id="13_5rb5m"]
+[ext_resource type="PackedScene" uid="uid://c1ux1hymxtwwo" path="res://scenes/Objects/ShoeSpawner.tscn" id="15_8b3fu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ashvg"]
 texture = ExtResource("2_r1crl")
@@ -223,6 +224,9 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_388xq"]
 radius = 19.0263
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b8mb7"]
+size = Vector2(104, 52)
+
 [node name="Game" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
@@ -380,3 +384,24 @@ camera = NodePath("../Camera2D")
 [node name="Blockade" parent="." node_paths=PackedStringArray("player") instance=ExtResource("13_5rb5m")]
 position = Vector2(-33, -85)
 player = NodePath("../Player")
+
+[node name="Killzone3" parent="." instance=ExtResource("15_8b3fu")]
+position = Vector2(62, -199)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone3"]
+shape = SubResource("RectangleShape2D_b8mb7")
+
+[node name="Node2D" type="Node2D" parent="Killzone3"]
+position = Vector2(-46, -18)
+
+[node name="Node2D2" type="Node2D" parent="Killzone3"]
+position = Vector2(-31, -18)
+
+[node name="Node2D3" type="Node2D" parent="Killzone3"]
+position = Vector2(-42, 8)
+
+[node name="Node2D4" type="Node2D" parent="Killzone3"]
+position = Vector2(39, -18)
+
+[node name="Node2D5" type="Node2D" parent="Killzone3"]
+position = Vector2(38, 17)

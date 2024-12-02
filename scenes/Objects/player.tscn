@@ -322,8 +322,8 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_bvcm0"]
-radius = 5.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_twev2"]
+radius = 6.0
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 5
@@ -338,4 +338,5 @@ autoplay = "rat_idle1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -5)
-shape = SubResource("CircleShape2D_bvcm0")
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_twev2")
