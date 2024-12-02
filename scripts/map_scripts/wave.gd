@@ -6,9 +6,7 @@ var player_inside: CharacterBody2D = null
 @export var parent: Node2D = null
 
 func _ready():
-	self.monitoring = true
 	connect('body_exited', _on_body_exited)
-	connect('body_entered', _on_body_entered)
 
 
 var processed_bodies = []
