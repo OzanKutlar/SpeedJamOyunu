@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdo2bfqps4fsm"]
+
+[ext_resource type="Script" path="res://scenes/Objects/blockade_spawner.gd" id="1_2dhac"]
+[ext_resource type="Texture2D" uid="uid://fn05aiifro3f" path="res://assets/sprites/Factory_OilSprayer.png" id="2_fafji"]
+[ext_resource type="PackedScene" uid="uid://byh1oawricta6" path="res://scenes/Objects/Blockade.tscn" id="3_esxju"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xm5ri"]
+size = Vector2(16, 16)
+
+[node name="BlockadeSpawner" type="StaticBody2D"]
+script = ExtResource("1_2dhac")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_fafji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xm5ri")
+
+[node name="Blockade" parent="." instance=ExtResource("3_esxju")]
+position = Vector2(0, 10000)
+
+[node name="Timer" type="Timer" parent="."]
