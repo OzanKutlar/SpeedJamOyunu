@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dth2ukpsf48cy"]
+
+[ext_resource type="Texture2D" uid="uid://duo1jajrxia24" path="res://assets/sprites/Factory_Shoe.png" id="1_56y7n"]
+[ext_resource type="Script" path="res://scripts/map_scripts/TheShoe.gd" id="1_hjadj"]
+[ext_resource type="Texture2D" uid="uid://tetx0nj4ausy" path="res://assets/sprites/Factory_ShoeSilhouette.png" id="2_urk8m"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j82dv"]
+height = 50.0
+
+[node name="ShoeSpawnArea" type="Area2D"]
+script = ExtResource("1_hjadj")
+
+[node name="Shoe" type="AnimatableBody2D" parent="."]
+
+[node name="Shoe" type="Sprite2D" parent="Shoe"]
+texture = ExtResource("1_56y7n")
+
+[node name="Shadow" type="Sprite2D" parent="Shoe"]
+texture = ExtResource("2_urk8m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shoe"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_j82dv")
+
+[node name="Timer" type="Timer" parent="."]
