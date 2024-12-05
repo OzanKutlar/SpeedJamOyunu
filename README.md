@@ -12,7 +12,7 @@ If you'd like to run the game from the source, follow these steps:
 1. **Download the Repository**  
    Clone this repository or download it as a ZIP file and extract it:
    ```bash
-   git clone [<repository-link>](https://github.com/OzanKutlar/SpeedJamOyunu.git)
+   git clone https://github.com/OzanKutlar/SpeedJamOyunu.git
    ```
 
 2. **Install Godot Engine**  
